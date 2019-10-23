@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">News Feed</string>
+    <string name="fetching_news">Fetching news ...</string>
+    <string name="news_refreshed">News Refreshed</string>
+    <string name="the_guardian_news">The Guardian News</string>
+    <string name="new_articles_available">New articles are available !!!</string>
+    <string name="notific_channel">myChannel</string>
+    <string name="articel_pinned">The article is pinned</string>
+    <string name="article_deleted">The article is deleted</string>
+</resources>

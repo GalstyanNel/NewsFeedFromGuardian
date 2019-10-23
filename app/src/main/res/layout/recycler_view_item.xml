@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/card_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="5dp"
+        android:layout_gravity="center"
+        app:cardCornerRadius="10dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp">
+
+
+            <ImageView
+                android:id="@+id/articleImage"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:layout_centerHorizontal="true"
+                android:transitionName="imageTransition"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:src="@drawable/loading" />
+
+            <TextView
+                android:id="@+id/articleCategory"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorRed"
+                android:drawablePadding="5dp"
+                android:ellipsize="end"
+                android:layout_below="@+id/articleImage"
+                android:textStyle="bold"
+                android:fontFamily="sans-serif"
+                android:transitionName="categoryTransition"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/articleTitle"
+                android:transitionName="titleTransition"
+                android:layout_width="match_parent"
+                android:drawablePadding="5dp"
+                android:ellipsize="end"
+                android:layout_below="@+id/articleCategory"
+                android:maxLines="3"
+                android:fontFamily="sans-serif"
+                android:layout_height="wrap_content"
+                android:textColor="#000"
+                android:textSize="16sp" />
+
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+</FrameLayout>

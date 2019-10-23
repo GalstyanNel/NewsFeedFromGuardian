@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="600dp"
+    app:cardCornerRadius="10dp"
+    tools:context=".view.activities.TransitionActivity">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:id="@+id/transitionCategory"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="50dp"
+                android:fontFamily="sans-serif"
+                android:gravity="center"
+                android:textColor="@color/colorRed"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:transitionName="categoryTransition" />
+
+
+            <ImageView
+                android:id="@+id/transitionImage"
+                android:layout_width="350dp"
+                android:layout_height="350dp"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:scaleType="centerCrop"
+                android:src="@drawable/loading"
+                android:transitionName="imageTransition" />
+
+            <TextView
+                android:id="@+id/transitionTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/transitionImage"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="5dp"
+                android:drawablePadding="5dp"
+                android:ellipsize="end"
+                android:fontFamily="sans-serif"
+                android:textColor="#000"
+                android:textSize="16sp"
+                android:transitionName="titleTransition" />
+
+            <com.github.ivbaranov.mfb.MaterialFavoriteButton
+                android:id="@+id/favouriteButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                app:mfb_animate_favorite="true"
+                android:layout_below="@+id/transitionTitle"
+                app:mfb_bounce_duration="300"
+                app:mfb_rotation_angle="360"
+                app:mfb_rotation_duration="400"
+                app:mfb_size="48"
+                app:mfb_type="heart" />
+
+        </RelativeLayout>
+
+</android.support.v7.widget.CardView>
